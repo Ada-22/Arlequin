@@ -3,9 +3,6 @@ import React from "react"
 const list = ()=>{
     return(
         <ul className="navbar-nav mr-auto">
-              <li className="nav-item active">
-                <a className="nav-link arlequin mr-5" href="#"><div className="my-div"></div></a>
-              </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">Contacto</a>
               </li>
@@ -14,7 +11,7 @@ const list = ()=>{
                  Productos
                 </a>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a className="dropdown-item" href="#">Cotillon</a>
+                  <a className="dropdown-item" href="#">Máscaras</a>
                   <a className="dropdown-item" href="#">Disfraces</a>
                 </div>
               </li>

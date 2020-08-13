@@ -2,7 +2,7 @@
   text-align: center;
 }
 .App-header {
-  background-image: url('./bg-arlequin.jpg');
+  background-image: url('./images/bg-arlequin.jpg');
   background-position: center;
   background-size: cover;
   min-height: 100vh;
@@ -15,33 +15,22 @@
   width: 100vw;
   font-family: 'Shadows Into Light', cursive;
 }
-.nav-link .arlequin{
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-weight: 700;
-}
+
 .bg-dark{
   background-color: rgb(7, 6, 6) !important;
   
 }
 
 .divLogo{
-  background-image: url("https://www.iconspng.com/uploads/jester-hat/jester-hat.png");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 50px;
-  height: 50px;
-  border-radius: 8%;
-  border: 2px solid rgb(92, 3, 3);
-}
-.my-div{
   width: 100px;
   height: 40px;
-  background-image: url('./arlequin.png');
+  background-image: url('./images/arlequin.png');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  margin-right: 120px;
 }
+
 .btn-outline-danger{
  border: 1px solid rgb(141, 4, 4)!important;
 }
