@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fc4897ea365fa8ece7dd537b5d0db58b",
+    "revision": "51244a30ad56c8b2d52bce501b8ce0ea",
     "url": "/Arlequin/index.html"
   },
   {
-    "revision": "8e4dd1ec42bf544f077c",
-    "url": "/Arlequin/static/css/main.f486d507.chunk.css"
+    "revision": "45aca754f592f4f2b7ff",
+    "url": "/Arlequin/static/css/main.363aeb9e.chunk.css"
   },
   {
-    "revision": "d5cc51d2b3461e14a6a5",
-    "url": "/Arlequin/static/js/2.e86e8292.chunk.js"
+    "revision": "3d35eb175aebbe6945a1",
+    "url": "/Arlequin/static/js/2.8eca1beb.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/Arlequin/static/js/2.e86e8292.chunk.js.LICENSE.txt"
+    "url": "/Arlequin/static/js/2.8eca1beb.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8e4dd1ec42bf544f077c",
-    "url": "/Arlequin/static/js/main.4c140aac.chunk.js"
+    "revision": "45aca754f592f4f2b7ff",
+    "url": "/Arlequin/static/js/main.4000df29.chunk.js"
   },
   {
     "revision": "0a9a5a4ed31b1f33d21c",
