@@ -10,7 +10,7 @@ const list = ()=>{
                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                  Productos
                 </a>
-                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div className="dropdown-menu py-0" aria-labelledby="navbarDropdown">
                   <a className="dropdown-item" href="#">Máscaras</a>
                   <a className="dropdown-item" href="#">Disfraces</a>
                 </div>
