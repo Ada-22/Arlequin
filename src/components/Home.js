@@ -8,7 +8,7 @@ const Home = ()=>{
         <div className="App">
         <header className="App-header">
          <Navbar/>
-         <Count/>
+         <Count initial = "0" min = "0" max = "10" />
         </header>
       </div>
     );
