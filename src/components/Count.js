@@ -20,10 +20,10 @@ let Contador = ({ initial, min, max }) => {
         <div className='card bg-dark'>
             <div className='card-body bg-dark'>
                 <p className='dark'>Contador</p>
-                <h3 id="contadorValue">{ contador }</h3>
-                <button id="restar" onClick={ subtract }>-</button>
+                <h3 className='text-center' id="contadorValue">{ contador }</h3>
+                <button id="restar" className='ml-2 mr-2' onClick={ subtract }>-</button>
                 &nbsp;
-                <button id="sumar"onClick={ add }>+</button>
+                <button id="sumar" onClick={ add }>+</button>
                 <br/>
             </div>
         </div>
