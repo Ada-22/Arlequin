@@ -3,11 +3,12 @@ import productStore from './Product-store';
 
 
 
+
 function ProductList({ products }) {
   return <>
-  <h2>Disfraces</h2>
+  <h2 className='p-3'>Disfraces</h2>
   <ul className='row'>
-    {products.map((p) => <li className='col-md-2' key={p.id}>{p.name}</li>)}
+{products.map((p) => <li className='col-md-2' key={p.id}>{p.name}</li>)}
   </ul>
   </>
 }
@@ -29,4 +30,4 @@ function Items() {
   </>;
 }
 
-export default Items
+export default Items 
