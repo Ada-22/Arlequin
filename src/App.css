@@ -56,7 +56,9 @@
   height: 150px;
   width: 120px;
 }
-
+.selected{
+  color: red;
+}
 @media only screen and (max-width: 600px){
 .App-header {
   background-position: left top;

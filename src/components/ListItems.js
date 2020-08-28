@@ -3,15 +3,20 @@ import productStore from './Product-store';
 
 
 
-
 function ProductList({ products }) {
+  function handleClick(e) {
+    e.preventDefault();
+    let mod = e.target.id;
+  }
+
   return <>
   <h2 className='p-3'>Disfraces</h2>
   <ul className='row'>
-{products.map((p) => <li className='col-md-2' key={p.id}>{p.name}</li>)}
+{products.map((p) => <li onClick = {handleClick} id={p.id} className='col-md-2' key={p.id}>{p.name}</li>)}
   </ul>
   </>
 }
+
 
 function Items() {
   const [products, setProducts] = useState([]);
