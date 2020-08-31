@@ -19,8 +19,8 @@ let Contador = ({ initial, min, max }) => {
     return (
         <div className='card bg-dark'>
             <div className='card-body bg-dark'>
-                <p className='dark'>Cantidad</p>
-                <h3 className='text-center' id="contadorValue">{ contador }</h3>
+                <p className='dark pl-3'>Cantidad</p>
+                <h3 className='text-center dark' id="contadorValue">{ contador }</h3>
                 <button id="restar" className='ml-2 mr-2' onClick={ subtract }>-</button>
                 &nbsp;
                 <button id="sumar" onClick={ add }>+</button>

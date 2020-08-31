@@ -1,23 +1,39 @@
 import React, { useEffect, useState } from 'react';
 import productStore from './Product-store';
 
-
-
-function ProductList({ products }) {
-  function handleClick(e) {
-    e.preventDefault();
-    let mod = e.target.id;
-  }
-
-  return <>
-  <h2 className='p-3'>Disfraces</h2>
-  <ul className='row'>
-{products.map((p) => <li onClick = {handleClick} id={p.id} className='col-md-2' key={p.id}>{p.name}</li>)}
-  </ul>
-  </>
+function handleClick(e) {
+  e.preventDefault();
+  let mod = e.target.id;
+  return mod
 }
 
 
+function Disfraces({ products }) {
+  
+
+  let disfraces = products.filter(e => e.category === 'disfraces');
+  return <>
+  <h2 className='p-3 danger'>Disfraces</h2>
+  <ul className='row'>{disfraces.map((p) => 
+    <li onClick = {handleClick} id={p.id} className='col-md-4' key={p.id}>
+      <p>{p.name}</p>
+      <img className='img-fluid imgs mb-1'src={p.img} alt="product"/><br/>
+      <button className="btn btn-outline-danger mt-4 mb-5">Ver detalle</button></li>)}
+  </ul>
+  </>
+}
+function Mascaras({ products }) {
+  let mascaras = products.filter(e => e.category === 'mascaras');
+  return <>
+  <h2 className='p-3'>Máscaras</h2>
+  <ul className='row'>{mascaras.map((p) => 
+    <li onClick = {handleClick} id={p.id} className='col-md-4' key={p.id}>
+      <p>{p.name}</p>
+      <img className='img-fluid imgs mb-1'src={p.img} alt="product"/><br/>
+      <button className="btn btn-outline-danger mt-4 mb-5">Ver detalle</button></li>)}
+  </ul>
+  </>
+}
 function Items() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -31,7 +47,10 @@ function Items() {
 
   return <>
   { loading && <p>Cargando disfraces...</p>}
-  <ProductList products={products}></ProductList>
+  <Disfraces products={products}></Disfraces>
+  { loading && <p>Cargando mascaras...</p>}
+  <Mascaras products={products}></Mascaras>
+
   </>;
 }
 

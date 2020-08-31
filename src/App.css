@@ -1,3 +1,10 @@
+body{
+  font-family:'Shadows Into Light', cursive;
+  color: rgb(238, 230, 230);
+  background-color:   rgb(7, 6, 6) !important;
+  overflow-x: hidden;
+}
+
 .App {
   text-align: center;
 }
@@ -5,7 +12,8 @@
   background-image: url('./images/bg-arlequin.jpg');
   background-position: center;
   background-size: cover;
-  min-height: 80vh;
+  background-attachment: fixed;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,7 +21,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
   width: 100vw;
-  font-family: 'Shadows Into Light', cursive;
+
 }
 .bg-dark{
   background-color: rgb(7, 6, 6) !important;
@@ -45,19 +53,47 @@
   height: 600px;
   width: 60%;
   padding: 40px;
-  background: rgb(223, 219, 219);
-  margin: 0 auto;
+  background: rgb(243, 234, 234);
+  margin: 20px auto;
+  color: #000;
 }
 .card{
   border: 4px solid rgb(65, 5, 5);
   border-radius: 8%;
-  margin-right: 80%;
+  margin-top: 200px;
   margin-bottom: 24px;
   height: 150px;
   width: 120px;
 }
 .selected{
   color: red;
+}
+.imgs{
+  width: 280px;
+  height: 280px;
+  transform:scale(1);
+        -ms-transform:scale(1); 
+        -moz-transform:scale(1); 
+        -webkit-transform:scale(1); 
+        -o-transform:scale(1);
+        transition: all 500ms ease-in-out;
+        -webkit-transition: all 500ms ease-in-out;;
+        -moz-transition: all 500ms ease-in-out; 
+        -ms-transition: all 500ms ease-in-out; 
+        -o-transition: all 500ms ease-in-out;      
+    }        
+.imgs:hover{
+            transform:scale(1.1);
+            -ms-transform:scale(1.1); 
+            -moz-transform:scale(1.1);
+            -webkit-transform:scale(1.1); 
+            -o-transform:scale(1.1);
+}
+.dark{
+  color: rgb(238, 230, 230);
+}
+li{
+  list-style: none;
 }
 @media only screen and (max-width: 600px){
 .App-header {

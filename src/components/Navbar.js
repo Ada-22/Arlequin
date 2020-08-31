@@ -5,7 +5,7 @@ import Searcher from '../components/Searcher'
 
 
 
-const navbar = ()=>{
+const Navbar = ()=>{
     return(
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
           <Logo/>
@@ -21,4 +21,4 @@ const navbar = ()=>{
     );
 }
 
-export default navbar
+export default Navbar

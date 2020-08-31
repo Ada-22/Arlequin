@@ -16,11 +16,17 @@ function ItemDetailContainer() {
 
 
   return <>
-  <div className="product">    
-  { loading && <p>Cargando detalle...</p>}
-  <ItemDetail product={product}></ItemDetail>
-  <Count initial = "0" min = "0" max = "10" />
-  <button className="btn-primary btn-dark">Comprar</button>
+  <div className="container product">
+    <div className="row"> 
+      <div className="col-md-6">
+      { loading && <p>Cargando detalle...</p>}
+      <ItemDetail product={product}></ItemDetail>
+       </div> 
+       <div className="col-md-6">
+       <Count initial = "0" min = "0" max = "10" />
+       <button className="btn btn-outline-danger mt-3 mb-5">Comprar</button>
+       </div>
+     </div> 
   </div>
   </>;
 }
