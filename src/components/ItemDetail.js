@@ -1,21 +1,11 @@
 import React from "react"
-import { useParams } from "react-router-dom";
 
-const { id } = useParams();
+
+function ItemDetail({ product, id }) {
     
-  useEffect(() => {
-      console.log('Mounted ItemDetail')
-      return () => {
-          console.log('Dismounted ItemDetail');
-      };          
-  }, []);  
-
-
-
-function ItemDetail({ product }) {
-    
-
-    let prod = product.filter(p => p.id === {id});
+  
+    let prod = product.filter(p => p.id === id );
+    console.log(prod);
     return <>
     <h2>Detalle</h2>
     <ul>{prod.map((p) => 

@@ -2,9 +2,13 @@ import Count from './Count';
 import React, { useEffect, useState } from 'react';
 import productStore from './Product-store';
 import ItemDetail from './ItemDetail';
+import { useParams } from "react-router-dom";
+
 
 
 function ItemDetailContainer({}) {
+  const { id } = useParams();
+
   const [product, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
