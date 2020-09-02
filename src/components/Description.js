@@ -1,10 +1,10 @@
 import Count from './Count';
 import React, { useEffect, useState } from 'react';
 import productStore from './Product-store';
-import ItemDetail from './ItemDetail'
+import ItemDetail from './ItemDetail';
 
 
-function ItemDetailContainer() {
+function ItemDetailContainer({}) {
   const [product, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -16,7 +16,7 @@ function ItemDetailContainer() {
 
 
   return <>
-  <div className="container product">
+  <div className="container product mt-5 pt-5">
     <div className="row"> 
       <div className="col-md-6">
       { loading && <p>Cargando detalle...</p>}
@@ -24,7 +24,6 @@ function ItemDetailContainer() {
        </div> 
        <div className="col-md-6">
        <Count initial = "0" min = "0" max = "10" />
-       <button className="btn btn-outline-danger mt-3 mb-5">Comprar</button>
        </div>
      </div> 
   </div>

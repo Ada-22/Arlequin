@@ -19,7 +19,7 @@ return <p className="ml-5">Total $ {sum}</p>
 
 const Cart = ({prod}) =>{  
 return <>
-<div className="product">
+<div className="product mt-5 pt-5">
     <h2>Su compra</h2>
     <ul className='card-md-8 mb-3'>{artic.map((p) => 
         <li className='col-md-12 p-0' key={p.index}><strong>{p.name}</strong><span className="ml-3">Valor= $ {p.precio}</span></li>)}

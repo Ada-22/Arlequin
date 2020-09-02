@@ -17,6 +17,7 @@ let Contador = ({ initial, min, max }) => {
     }
 
     return (
+        <>
         <div className='card bg-dark'>
             <div className='card-body bg-dark'>
                 <p className='dark pl-3'>Cantidad</p>
@@ -27,7 +28,13 @@ let Contador = ({ initial, min, max }) => {
                 <br/>
             </div>
         </div>
+        <div>
+            <button className="btn btn-outline-danger mt-3 mb-5"><strong>Comprar {contador}</strong></button>
+        </div>
+    </>
     )
 }
+
+
 
 export default Contador;

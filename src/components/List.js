@@ -1,4 +1,5 @@
 import React from "react"
+import {Link} from "react-router-dom"
 
 const list = ()=>{
     return(
@@ -11,15 +12,15 @@ const list = ()=>{
                  Productos
                 </a>
                 <div className="dropdown-menu py-0" aria-labelledby="navbarDropdown">
-                  <a className="dropdown-item" href="#">Máscaras</a>
-                  <a className="dropdown-item" href="#">Disfraces</a>
+                  <Link to="/mascaras" className="dropdown-item">Máscaras</Link>
+                  <Link to="/disfraces" className="dropdown-item">Disfraces</Link>
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"><i className="fas fa-user"></i></a>
+                <Link to="/user" class="nav-link"><i className="fas fa-user"></i></Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#"><i className="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                <Link to="/cart" className="nav-link"><i className="fa fa-shopping-cart" aria-hidden="true"></i></Link>
               </li>
             </ul>
     );

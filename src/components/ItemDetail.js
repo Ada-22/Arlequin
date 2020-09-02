@@ -2,9 +2,7 @@ import React from "react"
 
 function ItemDetail({ product }) {
 
-    let prod = product.filter(p => p.id === 10001);
-  
-    console.log(prod);
+    let prod = product.filter(p => p.id === 10002);
     return <>
     <h2>Detalle</h2>
     <ul>{prod.map((p) => 

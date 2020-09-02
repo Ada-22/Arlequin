@@ -1,8 +1,10 @@
 body{
   font-family:'Shadows Into Light', cursive;
+  font-size: 18px;
   color: rgb(238, 230, 230);
-  background-color:   rgb(7, 6, 6) !important;
+  background-color:   rgb(7, 6, 6)!important;
   overflow-x: hidden;
+  
 }
 
 .App {
@@ -53,9 +55,10 @@ body{
   height: 600px;
   width: 60%;
   padding: 40px;
-  background: rgb(243, 234, 234);
+  background: rgb(243, 234, 234) ;
   margin: 20px auto;
   color: #000;
+  
 }
 .card{
   border: 4px solid rgb(65, 5, 5);
@@ -95,6 +98,11 @@ body{
 li{
   list-style: none;
 }
+h2.danger{
+  color: rgb(97, 5, 5);
+  letter-spacing: 0.2em;
+}
+
 @media only screen and (max-width: 600px){
 .App-header {
   background-position: left top;
