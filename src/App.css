@@ -89,6 +89,10 @@ body{
   -webkit-transform:scale(1.1); 
   -o-transform:scale(1.1);           
 }
+.img_1{
+  width: 280px;
+  height: 280px;
+}
 .dark{
   color: rgb(238, 230, 230);
 }

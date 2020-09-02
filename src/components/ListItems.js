@@ -12,7 +12,7 @@ function Disfraces({ products }) {
       <li id={p.id} className='col-md-4' key={p.id}>
         <p>{p.name}</p>
         <img className='img-fluid imgs mb-1'src={p.img} alt="product"/><br/>
-        <Link to='/detalle' className="btn btn-outline-danger mt-4 mb-5">Ver detalle</Link></li>)}
+        <Link to={`/detalle/${p.id}`} className="btn btn-outline-danger mt-4 mb-5">Ver detalle</Link></li>)}
     </ul>
   </div>
   </>

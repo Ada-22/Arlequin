@@ -1,12 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, useParams } from 'react-router-dom';
 
 import './App.css';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import ItemsD from './components/ListItems';
 import ItemsM from './components/ListItemsM';
-import ItemDetailContainer from './components/Description';
+import ItemDetailContainer from './components/ItemDetailContainer';
 import Cart from './components/Cart';
 import ProductS from './components/Products';
 
@@ -21,7 +21,7 @@ function App() {
         <Route path="/productos" component={ProductS}/>
         <Route path="/disfraces" component={ItemsD}/>
         <Route path="/mascaras" component={ItemsM}/>
-        <Route path="/detalle" component={ItemDetailContainer}/>   
+        <Route path="/detalle/:id" component={ItemDetailContainer}/>   
         <Route path="/cart" component={Cart}/>     
       </Switch>               
   </Router>
