@@ -1,11 +1,8 @@
 import React from "react"
 
-
 function ItemDetail({ product, id }) {
-    
-  
-    let prod = product.filter(p => p.id === id );
-    console.log(prod);
+   
+   let prod = product.filter(p => p.id === id);
     return <>
     <h2>Detalle</h2>
     <ul>{prod.map((p) => 

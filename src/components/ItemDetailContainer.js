@@ -5,12 +5,10 @@ import ItemDetail from './ItemDetail';
 import { useParams } from "react-router-dom";
 
 
-
-function ItemDetailContainer({}) {
-  const { id } = useParams();
-
+function ItemDetailContainer() {
   const [product, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { id } = useParams();
   useEffect(() => {
     productStore().then(res => {
       setProducts(res); 
@@ -24,7 +22,7 @@ function ItemDetailContainer({}) {
     <div className="row"> 
       <div className="col-md-6">
       { loading && <p>Cargando detalle...</p>}
-      <ItemDetail product={product}></ItemDetail>
+      <ItemDetail product={product} id={id}></ItemDetail>
        </div> 
        <div className="col-md-6">
        <Count initial = "0" min = "0" max = "10" />

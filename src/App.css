@@ -27,6 +27,10 @@ body{
 .bg-dark{
   background-color: rgb(7, 6, 6) !important;
 }
+.bg-dark.scrolled {
+  background: linear-gradient(to left ,rgb(7, 6, 6), rgb(65, 2, 2), rgb(7, 6, 6))!important;
+  transition:500ms ease;
+}
 .divLogo{
   width: 100px;
   height: 40px;
@@ -42,8 +46,11 @@ body{
   letter-spacing: 0.2em;
 }
 .btn-outline-danger:hover, .dropdown-item:active{
-  background-color: rgb(141, 4, 4)!important;
+  background-color: rgb(94, 8, 8)!important;
+  border: 1px solid rgb(94, 8, 8)!important;
   color:  rgb(7, 6, 6) !important;
+  box-shadow: 0 4px 16px rgb(94, 8, 8);
+  transition: all 0.2s ease;
 }
 :focus {
   outline: -webkit-focus-ring-color auto 1px;
@@ -95,6 +102,9 @@ body{
 }
 .dark{
   color: rgb(238, 230, 230);
+}
+.dark:hover{
+  color: rgb(141, 4, 4);
 }
 li{
   list-style: none;
