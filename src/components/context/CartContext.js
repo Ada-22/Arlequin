@@ -7,22 +7,22 @@ export const useListContext = () => useContext(CartContext);
 export function ListProvider({ value, initial,  min, max, children }) {
 
     const [list, setList] = useState(value || []);
-    const [contador, setContador] = useState(initial);
+    const [count, setCount] = useState(initial);
   
     const add = () => {
-        if(contador < max){
-            setContador(contador + 1);
+        if(count < max){
+            setCount(count + 1);
         }
     }
     
     const subtract = () => {
-        if(contador> min){
-            setContador(contador - 1);
+        if(count> min){
+            setCount(count - 1);
         }
     }
   
-    function onContadorChange(event) {
-      setContador(event.target.value)
+    function onCountChange(event) {
+      setCount(event.target.value)
     }  
   
     function addItem(newItem) {
@@ -30,11 +30,11 @@ export function ListProvider({ value, initial,  min, max, children }) {
         setList(itemList);
     };
   
-    function cleanList() {
+    function clean() {
       setList([]);
     }
   
-    return <CartContext.Provider value={{ list, add , subtract, contador , onContadorChange, addItem, quantity: list.length, cleanList}}>
+    return <CartContext.Provider value={{ list, add , subtract, count , onCountChange, addItem, quantity: list.length, clean}}>
       {children}
     </CartContext.Provider>
   } 

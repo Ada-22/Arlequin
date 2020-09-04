@@ -55,8 +55,19 @@ body{
 :focus {
   outline: -webkit-focus-ring-color auto 1px;
 }
+.btn-dark{
+  background-color: rgb(7, 6, 6)!important;
+  border: 1px solid rgb(7, 6, 6)!important;
+  color:  rgb(247, 242, 242) !important;
+  transition: all 0.2s ease;
+  letter-spacing: 0.2em;
+}
+.btn-dark:hover{
+  border: 2px solid rgb(7, 6, 6)!important;
+  box-shadow: 0 4px 16px rgb(7, 6, 6);
+}
 .product{
-  height: auto;
+  height: 500px;
   width: 60%;
   padding: 40px;
   margin: 60px auto;
@@ -113,9 +124,8 @@ h2.danger{
   letter-spacing: 0.2em;
 }
 footer{
-  height: 100px;
-  background: linear-gradient(to left ,rgb(7, 6, 6), rgb(65, 2, 2), rgb(7, 6, 6))!important;
-  margin-bottom: 0 !important;
+  height: 50px;
+  
 }
 
 .networks{

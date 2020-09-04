@@ -1,34 +1,30 @@
-import React from "react"
-
-let artic = [
-{ id: 10001, name: 'Disfraz-Arlequin-1', description:'Traje de Arlequin de pana en rombos blancos y negros', precio: 4000}, 
-{ id: 10002, name: 'Disfraz-Arlequin-2', description:'Traje de Arlequin de pana en rombos blancos y negros', precio: 3000}, 
-{ id: 10003, name: 'Disfraz-Arlequin-3', description:'Traje de Arlequin de pana en rombos rojos y negros', precio: 7000}, 
-{ id: 10004, name: 'Disfraz-Arlequin-4', description:'Traje de Arlequin de pana en rombos verdes y negros', precio: 5000}, 
-{ id: 10005, name: 'Disfraz-Arlequin-5', description:'Traje de Arlequin de pana en rombos plateados y negros', precio: 2000}, 
-{ id: 10006, name: 'Disfraz-Arlequin-6', description:'Traje de Arlequin de pana en rombos blancos y rojos', precio: 6000}];
-
-const Total =({prod})=>{
-   let sum = 0;
-   artic.forEach(element => {
-       sum += element.precio
-   });
-return <p className="ml-5">Total $ {sum}</p>
-}
+import React from 'react';
+import { useListContext } from './context/CartContext';
+import {Link} from 'react-router-dom'
 
 
-const Cart = ({prod}) =>{  
+
+export default function Cart() {
+    const { list, count, clean } = useListContext(); 
+
 return <>
 <div className="product mt-5 pt-5">
     <h2>Su compra</h2>
-    <ul className='card-md-8 mb-3'>{artic.map((p) => 
-        <li className='col-md-12 p-0' key={p.index}><strong>{p.name}</strong><span className="ml-3">Valor= $ {p.precio}</span></li>)}
+    <ul className='card-md-8 mb-3'>{list.map((p, idx) => 
+      <li className='col-md-12 p-0' key={p.id}>
+        <strong>{p.name}</strong>
+        <span className="ml-3">Valor por unidad = $ {p.price}</span>
+        <strong className="text-dark m-3">Cantidad: {p.count}</strong>
+        <strong className="text-danger">Total: $ {p.price * p.count}</strong>
+      </li>)}
     </ul>
-    <Total/>
-    <button className="btn btn-outline-danger mt-3 mb-5">Confirmar compra</button>
-
+    <button className="btn btn-outline-danger mt-3 mb-5 mr-3"><strong>Confirmar compra</strong></button>
+    <button className="btn btn-outline-danger mt-3 mb-5" onClick={clean}><strong>Eliminar pedido</strong></button>
+    <div>
+       <Link to="/mascaras"  className="btn btn-dark mr-4">Ver + Máscaras</Link>
+       <Link to="/disfraces" className="btn btn-dark">Ver + Disfraces</Link>
     </div>
-    </>
+</div>
+</>
 }
 
-export default Cart

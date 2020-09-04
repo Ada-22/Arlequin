@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useListContext } from './context/CartContext';
 
 const CartIcon = ()=>{
-    const { quantity } = useListContext();  
+  const { quantity } = useListContext();  
     return(
         <>
         <li className="nav-item">

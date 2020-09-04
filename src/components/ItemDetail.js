@@ -4,7 +4,7 @@ import { useListContext } from './context/CartContext';
 
 
 export default function ItemDetail ({ id, img, name, description, price }) {
-    const { addItem, contador } = useListContext();     
+    const { addItem, count } = useListContext();     
     return (
         <>
         <div className="container product mt-5 pt-5">
@@ -20,7 +20,7 @@ export default function ItemDetail ({ id, img, name, description, price }) {
               </ul>
             </div> 
             <div className="col-md-6">
-              <Count onAdd={() => addItem({id: id, name: name, price: price, contador: contador })}/>
+              <Count onAdd={() => addItem({id: id, name: name, price: price, count: count })}/>
             </div>
          </div> 
        </div>    

@@ -1,17 +1,17 @@
 import React from 'react';
 import { useListContext } from './context/CartContext';
+import {Link} from 'react-router-dom'
 
 
 function Count({ onAdd}) {
-const { add, subtract, contador, onContadorChange } = useListContext(); 
-
+const { add, subtract, count, onCountChange } = useListContext(); 
 
     return (
         <>
         <div className='card bg-dark'>
             <div className='card-body bg-dark'>
                 <p className='dark pl-3'>Cantidad</p> 
-                <h3 className='text-center dark' value={contador}  onChange={onContadorChange}/>
+                <h3 className='text-center dark' value={count} onChange={onCountChange}>{count}</h3>
                 <button id="restar" className='ml-2 mr-2' onClick={subtract}>-</button>
                 &nbsp;
                 <button id="sumar" onClick={ add }>+</button>
@@ -19,7 +19,7 @@ const { add, subtract, contador, onContadorChange } = useListContext();
             </div>
         </div>
         <div>
-            <button className="btn btn-outline-danger mt-3 mb-5" onClick={onAdd}><strong>Comprar{contador}</strong></button>
+            <Link to='/cart' className="btn btn-outline-danger mt-3 mb-5" onClick={onAdd}><strong>Comprar{count}</strong></Link>
         </div>
     </>
     );

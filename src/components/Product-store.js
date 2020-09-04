@@ -26,7 +26,7 @@ export default function productStore() {
         { id: '10010', category:'mascaras', name: 'Máscara -Arlequin-4', img:`${mas_4}`, description:'Máscara de Arlequin gotica', price: 1600},
         { id: '10011', category:'mascaras', name: 'Máscara -Arlequin-5', img:`${mas_5}`, description:'Máscara de Arlequin gotica', price: 1700},
         { id: '10012', category:'mascaras', name: 'Máscara -Arlequin-6', img:`${mas_6}`, description:'Máscara de Arlequin gotica', price: 1300}]);
-      }, 1000);
+      },);
     });
   };
   
