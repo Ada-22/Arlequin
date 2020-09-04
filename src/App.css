@@ -56,13 +56,12 @@ body{
   outline: -webkit-focus-ring-color auto 1px;
 }
 .product{
-  height: 600px;
+  height: auto;
   width: 60%;
   padding: 40px;
-  background: rgb(243, 234, 234) ;
-  margin: 20px auto;
+  margin: 60px auto;
   color: #000;
-  
+  background-color: rgb(234, 233, 231);
 }
 .card{
   border: 4px solid rgb(65, 5, 5);
@@ -113,7 +112,25 @@ h2.danger{
   color: rgb(97, 5, 5);
   letter-spacing: 0.2em;
 }
+footer{
+  height: 100px;
+  background: linear-gradient(to left ,rgb(7, 6, 6), rgb(65, 2, 2), rgb(7, 6, 6))!important;
+  margin-bottom: 0 !important;
+}
 
+.networks{
+  color: rgb(234, 233, 231);
+}
+.networks:hover{
+  color:rgb(7, 6, 6);
+}
+.badge-dark{
+  background-color: rgb(141, 4, 4);
+  border: 1px solid rgb(7, 6, 6);
+  color:rgb(7, 6, 6);
+
+
+}
 @media only screen and (max-width: 600px){
 .App-header {
   background-position: left top;

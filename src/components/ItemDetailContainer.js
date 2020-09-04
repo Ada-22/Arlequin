@@ -1,36 +1,71 @@
-import Count from './Count';
-import React, { useEffect, useState } from 'react';
+import React, {useState, useEffect} from 'react';
 import productStore from './Product-store';
 import ItemDetail from './ItemDetail';
-import { useParams } from "react-router-dom";
 
 
-function ItemDetailContainer() {
-  const [product, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const { id } = useParams();
-  useEffect(() => {
-    productStore().then(res => {
-      setProducts(res); 
-      setLoading(false); 
-    });
-  }, []);
+function ItemDetailContainer({id}) {
+    const [product, setProduct] = useState([]);
+    const [loading, setLoading] = useState(true);
+    
+    useEffect(() => {      
+        productStore().then(res => {
+            let prod = res.filter( (p) => p.id === id )
+            setProduct(prod[0]); 
+            setLoading(false);           
+        });     
+    }, [id]);
+    
+    return (
+        <>
+            { loading && <p>Cargando detalle...</p> }
 
-
-  return <>
-  <div className="container product mt-5 pt-5">
-    <div className="row"> 
-      <div className="col-md-6">
-      { loading && <p>Cargando detalle...</p>}
-      <ItemDetail product={product} id={id}></ItemDetail>
-       </div> 
-       <div className="col-md-6">
-       <Count initial = "0" min = "0" max = "10" />
-       </div>
-     </div> 
-  </div>
-  </>;
+            { !loading && <ItemDetail
+                key={product.id}
+                id={product.id}
+                category={product.category}
+                name={product.name}
+                img={product.img}
+                description={product.description}
+                price={product.price}                  
+            />}
+        </>
+    )
 }
 
-export default ItemDetailContainer
+export default ItemDetailContainer;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
