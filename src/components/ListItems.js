@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import productStore from './Product-store';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
 
 function Disfraces({ products }) {

@@ -15,7 +15,7 @@ import Footer from './components/Footer';
 
 function App() {
   return <>
-  <ListProvider value={[]} initial ={0} min ={0} max ={10}>  
+  <ListProvider value={[]} initial ={1} min ={1} max ={12}>  
     <Router>
       <Navbar/>
       <Switch>

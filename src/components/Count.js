@@ -19,7 +19,7 @@ const { add, subtract, count, onCountChange } = useListContext();
             </div>
         </div>
         <div>
-            <Link to='/cart' className="btn btn-outline-danger mt-3 mb-5" onClick={onAdd}><strong>Comprar{count}</strong></Link>
+            <Link to='/cart' className="btn btn-outline-danger mt-3 mb-5" onClick={onAdd}><strong>Comprar {count}</strong></Link>
         </div>
     </>
     );
