@@ -35,13 +35,19 @@ export function ListProvider({ value, initial,  min, max, children }) {
       setList([]);
     }
 
-    function total(list){
+    function totalProducts(list){
       let result = 0;
       list.map(i => result += i.count)
       return result
     }
+
+    function total(list) {
+      let totalPrice = 0;
+      list.map ( (i) => totalPrice += i.price * i.count )
+      return totalPrice
+    }
   
-    return <CartContext.Provider value={{ list, add , subtract, count , onCountChange, addItem, quantity: total(list), clean}}>
+    return <CartContext.Provider value={{ list, add , subtract, count , onCountChange, addItem, quantity: totalProducts(list), clean, total: total(list)}}>
       {children}
     </CartContext.Provider>
   } 

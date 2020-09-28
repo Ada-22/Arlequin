@@ -1,28 +1,104 @@
-import React from 'react'
-import ProductS from './Products';
+import React, {useState, useEffect} from 'react';
 import {getFirestore} from '../firebase';
-
-const db = getFirestore();
-const itemCollection = db.collection('productos');
-itemCollection.get().then((querySnapshot) => {
-  if (querySnapshot.size === 0){
-    console.log('no hay items');
-  }
-  const info = querySnapshot.docs.map(doc => doc.data());
-  console.log(info);
-
-});
+import {Link} from 'react-router-dom';
 
 
-const Home = ()=>{
 
-    return(
-        <div className='App'>
-          <header className='App-header'>
-          </header>
-        <ProductS/>
-      </div>
-    );
+function Home() {
+    
+    const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
+    
+    useEffect(() => {
+        const db = getFirestore();
+        const itemCollection = db.collection('productos');
+        const priceItems = itemCollection.where('price', '>', 5000).limit(6);
+
+        priceItems.get().then((querySnapshot) => {
+            if(querySnapshot.size === 0) {
+                console.log('No existen items de mas de 5000 pesos')
+            }
+            setProducts(querySnapshot.docs.map(doc => ({...doc.data(), id: doc.id}))); 
+        }).catch((error) => {
+            console.log('Error searching items', error);
+        }).finally(() => {
+            setLoading(false); 
+        })              
+            console.log('Mounted Home')
+            return () => {
+                console.log('Dismounted Home')
+            }
+    }, []);
+
+    return (
+        <>
+             <div className='App'>
+                <header className='App-header'>
+                </header>
+                
+            </div>
+            { loading && <p className="text-center" style={{marginTop: '10px', marginBottom: '10px'}}>Cargando listado de productos destacados...</p> }
+            
+            { !loading &&  
+            <div className='container'>
+              <ul className='row'>{products.map((p) => 
+                <li id={p.id} className='col-md-2' key={p.id}>
+                  <Link to={`/detalle/${p.id}`} className="dark">{p.name}</Link>
+                  <Link to={`/detalle/${p.id}`}><img className='img-fluid imgs mt-3 mb-1'src={p.img} alt="product"/><br/></Link>
+                  <Link to={`/detalle/${p.id}`} className="btn btn-outline-danger mt-4 mb-5"><strong>Ver detalle</strong></Link></li>)}
+              </ul>
+            </div>}
+        </>
+    )
 }
 
-export default Home
+export default Home;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
