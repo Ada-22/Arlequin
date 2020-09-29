@@ -33,7 +33,7 @@ return <>
       <p className="text-danger text-right mr-5 pr-5"><strong>Total: $ {total}</strong></p>
     </div>
     <div className="col-md-6 text-center">
-      <button className="btn btn-outline-danger m-3"><strong>Confirmar compra</strong></button>
+      <Link to="/form" className="btn btn-outline-danger m-3"><strong>Confirmar compra</strong></Link>
       <Link to="/mascaras"  className="btn btn-dark m-3">Ver + Máscaras</Link>
     </div>
     <div className="col-md-6 text-center">

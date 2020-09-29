@@ -7,7 +7,7 @@ import ItemsD from './components/ListItems';
 import ItemsM from './components/ListItemsM';
 import Helper from './components/Helper';
 import Cart from './components/Cart';
-import ProductS from './components/Products';
+import Form from './components/Form';
 import { ListProvider } from './components/context/CartContext';
 import Footer from './components/Footer';
 
@@ -20,7 +20,7 @@ function App() {
       <Navbar/>
       <Switch>
         <Route exact path="/" component={Home}/>
-        <Route path="/productos" component={ProductS}/>
+        <Route path="/form" component={Form}/>
         <Route path="/disfraces" component={ItemsD}/>
         <Route path="/mascaras" component={ItemsM}/>
         <Route path="/detalle/:id" component={Helper}/>   

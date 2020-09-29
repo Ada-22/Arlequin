@@ -129,8 +129,7 @@ footer{
   height: 50px;
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
-  position: relative;
-  
+  position: absolute !important;
 }
 
 .networks{
