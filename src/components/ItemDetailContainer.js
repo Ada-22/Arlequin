@@ -1,19 +1,26 @@
 import React, {useState, useEffect} from 'react';
-import productStore from './Product-store';
+import {getFirestore} from '../firebase';
 import ItemDetail from './ItemDetail';
+import {useParams} from "react-router-dom";
 
-
-function ItemDetailContainer({id}) {
+function ItemDetailContainer() {
     const [product, setProduct] = useState([]);
     const [loading, setLoading] = useState(true);
+    const { id = undefined } = useParams();   
     
-    useEffect(() => {      
-        productStore().then(res => {
-            let prod = res.filter( (p) => p.id === id )
-            setProduct(prod[0]); 
-            setLoading(false);           
+    useEffect(() => {
+        const db = getFirestore();
+        const itemCollection = db.collection('productos');
+        const product = itemCollection.doc(id)
+    
+        product.get().then((doc) => {
+            setProduct( {id: doc.id, ...doc.data() });
+        }).catch((error) => {
+            console.log('Error buscando producto', error);
+        }).finally(() => { 
+            setLoading(false);
         });     
-    }, [id]);
+    }, [id]); 
     
     return (
         <>
@@ -24,7 +31,7 @@ function ItemDetailContainer({id}) {
                 id={product.id}
                 category={product.category}
                 name={product.name}
-                img={product.img}
+                img={process.env.PUBLIC_URL + product.img}
                 description={product.description}
                 price={product.price}                  
             />}

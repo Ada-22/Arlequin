@@ -1,6 +1,6 @@
 import React from "react"
 import Logo from '../components/Logo'
-import List from '../components/List'
+import List from '../components/ListNav'
 import Searcher from '../components/Searcher'
 
 
