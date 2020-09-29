@@ -5,8 +5,18 @@ import {Link} from 'react-router-dom'
 
 
 export default function Cart() {
-    const { list, total, clean } = useListContext(); 
-
+    const { quantity, list, total, clean } = useListContext(); 
+  if (quantity === 0 ) {
+    return <>
+    <div className="container" style={{ height: 500 }}>
+        <div className="py-5 text-center mt-5">
+            <h2>Tu carrito de compras <i className="fa fa-shopping-cart" aria-hidden="true"></i> está vacío.</h2>
+            <Link className="btn btn-outline-danger m-3" to={`/`}>Volver a Home</Link>                        
+        </div>
+    </div>
+</> 
+  }  
+else
 return <>
 <div className="container product mt-5 pt-5">
   <div className="row">

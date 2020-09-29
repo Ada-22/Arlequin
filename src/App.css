@@ -74,6 +74,7 @@ ul{
   margin: 60px auto;
   color: #000;
   background-color: rgb(234, 233, 231);
+  min-height: 500px;
 }
 .card{
   border: 4px solid rgb(65, 5, 5);
@@ -81,6 +82,7 @@ ul{
   margin: 0 auto;
   height: 150px;
   width: 120px;
+  margin-top: 170px;
 }
 .selected{
   color: red;
@@ -125,6 +127,9 @@ h2.danger{
 }
 footer{
   height: 50px;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  position: relative;
   
 }
 
@@ -151,5 +156,8 @@ footer{
 }
 .product{
   width: 90%;
+}
+.card{
+  margin-top: 0;
 }
 }
