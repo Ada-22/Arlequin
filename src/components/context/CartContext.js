@@ -1,9 +1,6 @@
 import React, { useContext, useState }  from "react"
-
 export const CartContext = React.createContext ([]);
-
 export const useListContext = () => useContext(CartContext);
-
 export function ListProvider({ value, initial,  min, max, children }) {
 
     const [list, setList] = useState(value || []);

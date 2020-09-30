@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {getFirestore} from '../firebase';
 import {Link} from 'react-router-dom';
+import Footer from './Footer';
+
 
 
 
@@ -48,6 +50,7 @@ function Home() {
                   <Link to={`/detalle/${p.id}`} className="btn btn-outline-danger mt-3 mb-1"><strong>Ver detalle</strong></Link></li>)}
               </ul>
             </div>}
+            <Footer></Footer>
         </>
     )
 }

@@ -33,12 +33,12 @@ return <>
       <p className="text-danger text-right mr-5 pr-5"><strong>Total: $ {total}</strong></p>
     </div>
     <div className="col-md-6 text-center">
-      <Link to="/form" className="btn btn-outline-danger m-3"><strong>Confirmar compra</strong></Link>
-      <Link to="/mascaras"  className="btn btn-dark m-3">Ver + Máscaras</Link>
+      <Link to="/form" className="btn btn-outline-danger m-3" style={{ minWidth: 180 }}><strong>Confirmar compra</strong></Link>
+      <Link to="/mascaras"  className="btn btn-dark m-3" style={{ minWidth: 180 }}>Ver + Máscaras</Link>
     </div>
     <div className="col-md-6 text-center">
-       <button className="btn btn-outline-danger m-3" onClick={clean}><strong>Eliminar pedido</strong></button>
-       <Link to="/disfraces" className="btn btn-dark m-3">Ver + Disfraces</Link>
+       <button className="btn btn-outline-danger m-3" style={{ minWidth: 180 }} onClick={clean}><strong>Eliminar pedido</strong></button>
+       <Link to="/disfraces" className="btn btn-dark m-3" style={{ minWidth: 180 }}>Ver + Disfraces</Link>
     </div>
   </div>
 </div>

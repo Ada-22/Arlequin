@@ -3,8 +3,8 @@ body{
   font-size: 18px;
   color: rgb(238, 230, 230);
   background-color:   rgb(7, 6, 6)!important;
-   
 }
+
 .App {
   text-align: center;
   overflow-x: hidden; 
@@ -33,12 +33,12 @@ body{
 }
 .divLogo{
   width: 100px;
+  min-width: 70px;
   height: 40px;
   background-image: url('./images/arlequin.png');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  margin-right: 120px;
 }
 .btn-outline-danger{
   border: 1px solid rgb(141, 4, 4)!important;
@@ -127,11 +127,10 @@ h2.danger{
 }
 footer{
   height: 50px;
+  position: absolute;
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
-  position: absolute !important;
 }
-
 .networks{
   color: rgb(234, 233, 231);
 }

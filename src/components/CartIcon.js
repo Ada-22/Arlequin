@@ -6,7 +6,7 @@ const CartIcon = ()=>{
   const { quantity } = useListContext();  
     return(
         <>
-        <li className="nav-item">
+        <li className="nav-item iconCart">
             <Link to="/cart" className="nav-link">
               <i className="fa fa-shopping-cart" aria-hidden="true"></i>
               <span className="badge badge-dark badge-pill">{quantity}</span>

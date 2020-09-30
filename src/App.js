@@ -9,7 +9,6 @@ import Helper from './components/Helper';
 import Cart from './components/Cart';
 import Form from './components/Form';
 import { ListProvider } from './components/context/CartContext';
-import Footer from './components/Footer';
 
 
 
@@ -20,13 +19,13 @@ function App() {
       <Navbar/>
       <Switch>
         <Route exact path="/" component={Home}/>
+        <Route exact path="/Arlequin" component={Home}/>
         <Route path="/form" component={Form}/>
         <Route path="/disfraces" component={ItemsD}/>
         <Route path="/mascaras" component={ItemsM}/>
         <Route path="/detalle/:id" component={Helper}/>   
         <Route path="/cart" component={Cart}/>     
-      </Switch>
-      <Footer/>             
+      </Switch>           
     </Router>
   </ListProvider>
 </>;
