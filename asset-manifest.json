@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Arlequin/static/css/main.c91e7172.chunk.css",
-    "main.js": "/Arlequin/static/js/main.cea93453.chunk.js",
-    "main.js.map": "/Arlequin/static/js/main.cea93453.chunk.js.map",
+    "main.css": "/Arlequin/static/css/main.c2f77523.chunk.css",
+    "main.js": "/Arlequin/static/js/main.4c27a531.chunk.js",
+    "main.js.map": "/Arlequin/static/js/main.4c27a531.chunk.js.map",
     "runtime-main.js": "/Arlequin/static/js/runtime-main.2c042f2f.js",
     "runtime-main.js.map": "/Arlequin/static/js/runtime-main.2c042f2f.js.map",
     "static/js/2.6e0b4552.chunk.js": "/Arlequin/static/js/2.6e0b4552.chunk.js",
     "static/js/2.6e0b4552.chunk.js.map": "/Arlequin/static/js/2.6e0b4552.chunk.js.map",
     "index.html": "/Arlequin/index.html",
-    "precache-manifest.6985495575d2d51bf7e8cdaa770d7109.js": "/Arlequin/precache-manifest.6985495575d2d51bf7e8cdaa770d7109.js",
+    "precache-manifest.f28b5db3930cacdc3a528c4d508eee05.js": "/Arlequin/precache-manifest.f28b5db3930cacdc3a528c4d508eee05.js",
     "service-worker.js": "/Arlequin/service-worker.js",
-    "static/css/main.c91e7172.chunk.css.map": "/Arlequin/static/css/main.c91e7172.chunk.css.map",
+    "static/css/main.c2f77523.chunk.css.map": "/Arlequin/static/css/main.c2f77523.chunk.css.map",
     "static/js/2.6e0b4552.chunk.js.LICENSE.txt": "/Arlequin/static/js/2.6e0b4552.chunk.js.LICENSE.txt",
     "static/media/App.css": "/Arlequin/static/media/bg-arlequin.67064829.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.2c042f2f.js",
     "static/js/2.6e0b4552.chunk.js",
-    "static/css/main.c91e7172.chunk.css",
-    "static/js/main.cea93453.chunk.js"
+    "static/css/main.c2f77523.chunk.css",
+    "static/js/main.4c27a531.chunk.js"
   ]
 }
