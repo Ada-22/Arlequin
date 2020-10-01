@@ -171,4 +171,8 @@ footer{
 .title{
   display: none;
 }
+.col-md-2 img{
+  height: 260px;
+  width: 200px;
+}
 }
