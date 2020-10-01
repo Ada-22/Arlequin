@@ -6,12 +6,12 @@ import * as firebase from 'firebase/app'
 import 'firebase/firestore'
 
 
-function Field({inputLabel, nameField, style, type, id, placeholder, valueInput, onChange}) {
+function Field({name, inputLabel, nameField, style, type, id, placeholder, valueInput, onChange}) {
     return (
         <>
-            <div className="col-sm-6">
-                <label htmlFor={inputLabel} className="form-label" style={style}>{nameField}</label>
-                <input type={type} value={valueInput} className="form-control" id={id} placeholder={placeholder} required onChange={onChange}></input>
+            <div className='col-sm-6'>
+                <label htmlFor={inputLabel} name={name} className='form-label' style={style}>{nameField}</label>
+                <input type={type} value={valueInput} className='form-control' id={id} placeholder={placeholder} required onChange={onChange}></input>
             </div>
         </>
     )
@@ -43,39 +43,39 @@ function Form() {
         setOrderId(id);
         clean();
         } catch(err) {
-            console.log("Ha ocurrido un error creando la orden de compra")
+            console.log('Ha ocurrido un error creando la orden de compra')
         }
     }    
 
     if(orderId) {
         return <>
-                <div className="container">
-                    <div className="py-5 text-center mt-5">
-                        <h2 className="mt-5">¡Gracias por elegirnos!</h2>
-                        <h4 className="my-5">La compra se ha realizado exitosamente.</h4>
+                <div className='container'>
+                    <div className='py-5 text-center mt-5'>
+                        <h2 className='mt-5'>¡Gracias por elegirnos!</h2>
+                        <h4 className='my-5'>La compra se ha realizado exitosamente.</h4>
                         <strong>El ID de tu compra es {orderId}</strong>
-                        <p className="danger">Obtenga un descuento de 15% en su próxima compra con este id</p>
-                        <Link className="btn btn-outline-danger m-3" to={`/`}><strong>Volver a Home</strong></Link>                  
+                        <p className='danger'>Obtenga un descuento de 15% en su próxima compra con este id</p>
+                        <Link className='btn btn-outline-danger m-3' to={`/`}><strong>Volver a Home</strong></Link>                  
                     </div>
                 </div>   
         </>
     }
     
     return <>
-            <div className="container">
-                <div className="text-center py-5 mt-5">
-                    <h4 className="mt-5">Completa el formulario con tus datos para confirmar la compra.</h4>
+            <div className='container'>
+                <div className='text-center py-5 mt-5'>
+                    <h4 className='mt-5'>Completa el formulario con tus datos para confirmar la compra.</h4>
                 </div>
-                <div className="row">
-                    <div className="col-md-12">
+                <div className='row'>
+                    <div className='col-md-12'>
                         <form>
-                            <div className="row g-3">
-                                <Field inputLabel="inputName" nameField="Nombre y Apellido" valueInput={name} style={{ paddingTop: '5px'}} type="text" id="name" placeholder="Nombre y Apellido" onChange={onNameChange}/>
-                                <Field inputLabel="inputPhone" nameField="Teléfono" valueInput={phone} style={{ paddingTop: '10px'}} type="number" id="phone" placeholder="1133768450" onChange={onPhoneChange}/>                                               
-                                <Field inputLabel="inputEmail" nameField="Email" valueInput={email} style={{ paddingTop: '10px'}} type="email" id="email" placeholder="mail@ejemplo.com" onChange={onEmailChange}/>
-                                <Field inputLabel="inputConfirmEmail" nameField="Confirmar Email" valueInput={emailConfirm} style={{ paddingTop: '10px'}} type="email" id="emailconfirm" placeholder="mail@ejemplo.com" onChange={onEmailConfirmChange}/>              
+                            <div className='row g-3'>
+                                <Field inputLabel='inputName' name='name' nameField='Nombre y Apellido' valueInput={name} style={{ paddingTop: '5px'}} type='text' id='inputName' placeholder='Nombre y Apellido' onChange={onNameChange}/>
+                                <Field inputLabel='inputPhone' name='phone' nameField='Teléfono' valueInput={phone} style={{ paddingTop: '10px'}} type='number' id='inputPhone' placeholder='1133768450' onChange={onPhoneChange}/>                                               
+                                <Field inputLabel='inputEmail' name='email' nameField='Email' valueInput={email} style={{ paddingTop: '10px'}} type='email' id='inputEmail' placeholder='mail@ejemplo.com' onChange={onEmailChange}/>
+                                <Field inputLabel='inputConfirmEmail' name='email' nameField='Confirmar Email' valueInput={emailConfirm} style={{ paddingTop: '10px'}} type='email' id='inputConfirmEmail' placeholder='mail@ejemplo.com' onChange={onEmailConfirmChange}/>              
                             </div>                             
-                            <button className="btn btn-outline-danger btn-lg btn-block mt-5" type="submit" disabled={ !name || !phone || !email || (emailConfirm !== email) || sent } onClick={createOrder} style={{ marginBottom: '30px'}}>
+                            <button className='btn btn-outline-danger btn-lg btn-block mt-5' type='submit' disabled={ !name || !phone || !email || (emailConfirm !== email) || sent } onClick={createOrder} style={{ marginBottom: '30px'}}>
                                <strong>Confirmar</strong> 
                             </button>
                         </form>

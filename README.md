@@ -1,68 +1,59 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Trabajo práctico final del Curso React JS de CoderHouse
 
-## Available Scripts
+# Proyecto E-Commerce Tienda de disfraces Arlequin
 
-In the project directory, you can run:
+```
+Realizado por Carmen Mindeguia, contacto: mindeguia84@gmail.com
 
-### `npm start`
+```
+## Descripción
+```
+Este proyecto fue creado con [Create React App](https://github.com/facebook/create-react-app).
+En el he utilizado Bootstrap 4 para agilizar el desarrollo de los estilos y firebase para almacenar la información que se utiliza en la app.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Instrucciones de instalación 
 
-### `npm test`
+```
+git clone https://github.com/Ada-22/Arlequin.git
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+npm install
 
-### `npm run build`
+npm start
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+// Abrir navegador en http://localhost:3000/
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+```
+### Navegacion y componentes
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+La **navegación** ocurre en todo momento utilizando el router de la librería **react-router-dom** 
 
-### `npm run eject`
+La navegacion del e-commerce la determina el componente **Navbar** que esta accesible durante toda la experiencia, este contiene, un **Logo** (que nos lleva al componente **Home**, en la ruta '/'), 
+un menu desplegable llamado **Nuestros diseños** que al desplegarse contiene los links a **disfraces**
+(que nos lleva al componente **ListItems** en la ruta '/disfraces' ) y a **mascaras**( que nos lleva al componente **ListItemsM** en la ruta '/mascaras') y un carrito de compras **IconCart** (que se encuentra en la ruta '/cart' y nos lleva al componente **Cart**).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Home** Contiene un header y  un pequeño listado de 6 productos filtrados por el precio (mayor a 2000) y un pequeño **footer**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**ListItems** y **ListItemsM** Contienen las llamadas a firebase filtrando por category y utilizando **ListProducts** para las vistas que son iguales. En estas vistas se muestra un listado de 6 productos. 
+Al hacer click en un producto del listado, navega a la ruta /detalle/:id y permite ver su descripción
+(imagen, precio, selector de cantidad de productos, un boton para comprar y un boton para volver al home).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**IconCart** Se puede acceder en todo momento y tiene una indicación de la cantidad de items incluidos. Al clickearlo, dirige al componente **Cart**.
 
-## Learn More
+**Cart** Contiene el listado de productos seleccionados, la cantidad por producto elegido, la suma del precio de las unidades y la suma total de todos los productos, un boton para confirmar la compra que nos lleva a el componente **Form**, un boton para eliminar todo el listado de productos a comprar, y dos botones mas que nos llevan a **ver + disfraces** o a **ver + mascaras**.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Form** Es un formulario para confirmar la compra, nos pide nombre y apellido, telefono, email y repetir el email, tiene un boton para confirmar que esta deshabilitado hasta que el usuario llene todos los campos.
+Al confirmar se crea un objeto que es almacenado en firebase en la coleccion "ordenes" y da un feedback al usuario en el que se muestra el id de la compra realizada.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+### API de Context de React
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+```
+El componente CartContext contiene funciones que se utilizaran en diferentes componentes, por ejemplo: add, 
+subtract, clean, total y addItem, que sirven para realizar operaciones sobre la lista de productos que guardamos en el Cart.
 
-### Analyzing the Bundle Size
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

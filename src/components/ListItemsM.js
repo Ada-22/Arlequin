@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import {getFirestore} from '../firebase';
-import ListProducts from './ListProducts';
+import React, { useEffect, useState } from 'react'
+import {getFirestore} from '../firebase'
+import ListProducts from './ListProducts'
+import Footer from './Footer'
+
 
 
 function ItemsM() {
@@ -27,7 +29,7 @@ function ItemsM() {
   return <>
   { loading && <p>Cargando mascaras...</p>}
   <ListProducts products={products}></ListProducts>
-
+  <Footer/>
   </>;
 }
 

@@ -146,6 +146,16 @@ footer{
   height: 100px;
   width: 100px;
 }
+.valid-feedback{
+  color: rgb(104, 141, 4);
+  width: auto;
+  height: 40px;
+}
+.invalid-feedback{
+  color: rgb(141, 4, 4);
+  width: auto;
+  height: 40px;
+}
 @media only screen and (max-width: 600px){
 .App-header {
   background-position: left top;

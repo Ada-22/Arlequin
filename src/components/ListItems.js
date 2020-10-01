@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import {getFirestore} from '../firebase';
-import ListProducts from './ListProducts';
+import React, { useEffect, useState } from 'react'
+import {getFirestore} from '../firebase'
+import ListProducts from './ListProducts'
+import Footer from './Footer'
+
 
 
 function ItemsD() {
@@ -29,6 +31,7 @@ function ItemsD() {
   return <>
   { loading && <p>Cargando disfraces...</p>}
   <ListProducts products={products}></ListProducts>
+  <Footer/>
   </>;
 }
 
