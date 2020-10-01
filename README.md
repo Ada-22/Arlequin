@@ -1,6 +1,6 @@
-# Trabajo práctico final del Curso React JS de CoderHouse
+## Trabajo práctico final del Curso React JS de CoderHouse
 
-# Proyecto E-Commerce Tienda de disfraces Arlequin
+## Proyecto E-Commerce Tienda de disfraces Arlequin
 
 ```
 Realizado por Carmen Mindeguia, contacto: mindeguia84@gmail.com
