@@ -168,4 +168,7 @@ footer{
 .card{
   margin-top: 0;
 }
+.title{
+  display: none;
+}
 }
