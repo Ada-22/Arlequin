@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 function ListProducts({ products }) {
     let titulo = products.map(p => p.category).find(e => e.length > 5);
     return <>
-    <h2 className='p-3 danger mt-5 text-center danger'>Nuestros {titulo}...</h2>
+    <h2 className='p-3 danger mt-5 text-center dangerTitle'>{titulo}</h2>
     <div className='container'>
       <ul className='row'>{products.map( p => 
         <li id={p.id} className='col-md-4' key={p.id}>

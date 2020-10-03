@@ -30,12 +30,11 @@ npm start
 La **navegación** ocurre en todo momento utilizando el router de la librería **react-router-dom** 
 
 La navegacion del e-commerce la determina el componente **Navbar** que esta accesible durante toda la experiencia, este contiene, un **Logo** (que nos lleva al componente **Home**, en la ruta '/'), 
-un menu desplegable llamado **Nuestros diseños** que al desplegarse contiene los links a **disfraces**
-(que nos lleva al componente **ListItems** en la ruta '/disfraces' ) y a **mascaras**( que nos lleva al componente **ListItemsM** en la ruta '/mascaras') y un carrito de compras **IconCart** (que se encuentra en la ruta '/cart' y nos lleva al componente **Cart**).
+un menu desplegable llamado **Nuestros diseños** que al desplegarse contiene los links a **disfraces** ( en la ruta 'category/disfraces' ) y a **mascaras**( en la ruta 'category/máscaras') y un carrito de compras **IconCart** (que se encuentra en la ruta '/cart' y nos lleva al componente **Cart**).
 
 **Home** Contiene un header y  un pequeño listado de 6 productos filtrados por el precio (mayor a 2000) y un pequeño **footer**
 
-**ListItems** y **ListItemsM** Contienen las llamadas a firebase filtrando por category y utilizando **ListProducts** para las vistas que son iguales. En estas vistas se muestra un listado de 6 productos. 
+**ListItems**  Contiene la llamada a firebase filtrando por category segun el parmetro recibido como categoryId en la ruta **/category/:categoryId** y utilizando **ListProducts** para las vistas que son iguales. En estas vistas se muestra un listado de 6 productos. 
 Al hacer click en un producto del listado, navega a la ruta /detalle/:id y permite ver su descripción
 (imagen, precio, selector de cantidad de productos, un boton para comprar y un boton para volver al home).
 
@@ -51,8 +50,7 @@ Al confirmar se crea un objeto que es almacenado en firebase en la coleccion "or
 ### API de Context de React
 
 ```
-El componente CartContext contiene funciones que se utilizaran en diferentes componentes, por ejemplo: add, 
-subtract, clean, total y addItem, que sirven para realizar operaciones sobre la lista de productos que guardamos en el Cart.
+El componente CartContext contiene funciones que se utilizaran en diferentes componentes, por ejemplo: add, subtract, clean, total y addItem, que sirven para realizar operaciones sobre la lista de productos que guardamos en el Cart.
 
 ```
 
