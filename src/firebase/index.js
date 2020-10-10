@@ -2,13 +2,14 @@ import * as firebase from "firebase/app";
 import "firebase/firestore";
 
 const app = firebase.initializeApp ({
-    apiKey: "AIzaSyDLgD__tGJTwnG8XMr_22x8xYILpc2j1l0",
-    authDomain: "arlequin-my-app.firebaseapp.com",
-    databaseURL: "https://arlequin-my-app.firebaseio.com",
-    projectId: "arlequin-my-app",
-    storageBucket: "arlequin-my-app.appspot.com",
-    messagingSenderId: "933168345307",
-    appId: "1:933168345307:web:d0cce8ae39e4c6f4fd9cfe"});
+    apiKey: "AIzaSyAAH2r05_Dkc6OOOEI8wwOJLuisLPJEvLs",
+    authDomain: "arlequin-df91c.firebaseapp.com",
+    databaseURL: "https://arlequin-df91c.firebaseio.com",
+    projectId: "arlequin-df91c",
+    storageBucket: "arlequin-df91c.appspot.com",
+    messagingSenderId: "152823626782",
+    appId: "1:152823626782:web:6126bc24b715e001d5020f"
+});
 
 export function getFirebase(){
     return app;
