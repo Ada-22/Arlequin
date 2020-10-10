@@ -14,7 +14,7 @@ function ListItems() {
 
     useEffect(() => {
       const db = getFirestore();
-      const itemCollection = db.collection('products');
+      const itemCollection = db.collection('"products"');
       const categoryItems = itemCollection.where('category', '==', categoryId)
       categoryItems.get().then((querySnapshot) => {
         if(querySnapshot.size === 0) {
