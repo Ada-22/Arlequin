@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3c6f6d41c7dd814f3bab91fda2b6d698",
+    "revision": "95833753767a6b38dd451ca80c4e18f6",
     "url": "/Arlequin/index.html"
   },
   {
-    "revision": "33953cea69ff732a5993",
+    "revision": "00eddeaac585daf8ec9b",
     "url": "/Arlequin/static/css/main.6bd2a8e2.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Arlequin/static/js/2.a7ae5a1f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "33953cea69ff732a5993",
-    "url": "/Arlequin/static/js/main.710892d4.chunk.js"
+    "revision": "00eddeaac585daf8ec9b",
+    "url": "/Arlequin/static/js/main.ea08e9ea.chunk.js"
   },
   {
     "revision": "33db8b89ddffb729cd87",
