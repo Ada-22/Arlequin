@@ -36,7 +36,7 @@ function Form() {
         const object = { name, phone, email }
         const items = list.map( p => ({ id: p.id, name: p.name, quantity, subtotal: p.price * p.count }) )
         const db = getFirestore();
-        const orders = db.collection('ordenes');
+        const orders = db.collection('orders');
         const newOrder = { object, items, date: firebase.firestore.Timestamp.fromDate(new Date()), total}
         try {
         const {id} = await orders.add(newOrder);

@@ -13,7 +13,7 @@ function ItemDetailContainer() {
     
     useEffect(() => {
         const db = getFirestore();
-        const itemCollection = db.collection('productos');
+        const itemCollection = db.collection('products');
         const product = itemCollection.doc(id)
     
         product.get().then(doc => {

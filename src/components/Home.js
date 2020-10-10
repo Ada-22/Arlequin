@@ -13,7 +13,7 @@ function Home() {
     
     useEffect(() => {
         const db = getFirestore();
-        const itemCollection = db.collection('productos');
+        const itemCollection = db.collection('products');
         const priceItems = itemCollection.where('price', '>', 2000).limit(6);
 
         priceItems.get().then((querySnapshot) => {
